@@ -10,6 +10,7 @@
     <option name="ignoredFiles">
       <set>
         <option value="$PROJECT_DIR$/blackhorse/pom.xml" />
+        <option value="$PROJECT_DIR$/spark/pom.xml" />
       </set>
     </option>
   </component>

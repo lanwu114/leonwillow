@@ -6,12 +6,15 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="spark" />
         <module name="hadoop" />
         <module name="multithreading" />
+        <module name="kafka" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="blackhorse" target="1.5" />
+      <module name="spark" target="1.5" />
     </bytecodeTargetLevel>
   </component>
 </project>

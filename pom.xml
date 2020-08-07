@@ -11,10 +11,28 @@
     <modules>
         <module>hadoop</module>
         <module>multithreading</module>
+        <module>kafka</module>
+        <module>spark</module>
     </modules>
+    <properties>
+        <lombok.version>1.18.12</lombok.version>
+        <slf4j.version>1.2.3</slf4j.version>
+    </properties>
+    <dependencyManagement>
+        <dependencies>
+            <!--lombok-->
+            <dependency>
+                <groupId>org.projectlombok</groupId>
+                <artifactId>lombok</artifactId>
+                <version>${lombok.version}</version>
+            </dependency>
+            <!--slf4j-->
+            <dependency>
+                <groupId>ch.qos.logback</groupId>
+                <artifactId>logback-classic</artifactId>
+                <version>${slf4j.version}</version>
+            </dependency>
 
-<dependencyManagement>
-    <dependencies>
-    </dependencies>
-</dependencyManagement>
+        </dependencies>
+    </dependencyManagement>
 </project>
