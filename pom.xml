@@ -12,14 +12,52 @@
         <module>hadoop</module>
         <module>multithreading</module>
         <module>kafka</module>
-        <module>spark</module>
+        <module>streaming</module>
     </modules>
     <properties>
         <lombok.version>1.18.12</lombok.version>
         <slf4j.version>1.2.3</slf4j.version>
+        <mysql.version>5.1.48</mysql.version>
+        <kafka.version>2.1.0</kafka.version>
+        <druid.version>1.1.10</druid.version>
+        <hadoop-client.version>2.6.5</hadoop-client.version>
+        <zookeeper.version>3.4.13</zookeeper.version>
+        <spark.version>2.4.0</spark.version>
+        <scala.version>2.12.7</scala.version>
+        <maven.version>33</maven.version>
     </properties>
     <dependencyManagement>
         <dependencies>
+            <!--scala-->
+            <dependency>
+                <groupId>org.scala-lang</groupId>
+                <artifactId>scala-library</artifactId>
+                <version>${scala.version}</version>
+            </dependency>
+            <!--spark-->
+            <dependency>
+                <groupId>org.apache.spark</groupId>
+                <artifactId>spark-core_2.12</artifactId>
+                <version>${spark.version}</version>
+            </dependency>
+            <!--zookeeper-->
+            <dependency>
+                <groupId>org.apache.zookeeper</groupId>
+                <artifactId>zookeeper</artifactId>
+                <version>${zookeeper.version}</version>
+            </dependency>
+            <!--hadoop-client-->
+            <dependency>
+                <groupId>org.apache.hadoop</groupId>
+                <artifactId>hadoop-client</artifactId>
+                <version>${hadoop-client.version}</version>
+            </dependency>
+            <!--kafka-->
+            <dependency>
+                <groupId>org.apache.kafka</groupId>
+                <artifactId>kafka-clients</artifactId>
+                <version>${kafka.version}</version>
+            </dependency>
             <!--lombok-->
             <dependency>
                 <groupId>org.projectlombok</groupId>
@@ -32,7 +70,23 @@
                 <artifactId>logback-classic</artifactId>
                 <version>${slf4j.version}</version>
             </dependency>
-
+            <!--mysql-->
+            <dependency>
+                <groupId>mysql</groupId>
+                <artifactId>mysql-connector-java</artifactId>
+                <version>${mysql.version}</version>
+            </dependency>
+            <!--druid-->
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>druid</artifactId>
+                <version>${druid.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-plugins</artifactId>
+                <version>${maven.version}</version>
+            </dependency>
         </dependencies>
     </dependencyManagement>
 </project>

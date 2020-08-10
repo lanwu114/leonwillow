@@ -11,5 +11,7 @@
 
     <artifactId>multithreading</artifactId>
 
+<dependencies>
 
+</dependencies>
 </project>
