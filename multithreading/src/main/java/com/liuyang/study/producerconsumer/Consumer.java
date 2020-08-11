@@ -5,12 +5,13 @@ import lombok.Data;
 /**
  * Author: LeonWillow | LiuYang | lanwu114
  * Date: 2020/8/10 20:16
- * Des:
+ * Des:消费者类
  */
 @Data
 public class Consumer implements Runnable {
-    public Integer subtractNum = 100;
-    public Product product;
+    //定义subtractNum 为一个消费者一次消费的数量，默认为1
+    private Integer subtractNum = 1;
+    private Product product;
 
     public Consumer(Integer addNum, Product product) {
         this.subtractNum = addNum;
@@ -23,8 +24,6 @@ public class Consumer implements Runnable {
 
     @Override
     public void run() {
-        while (product.n <= 100) {
-            this.product.subtract(subtractNum);
-        }
+        this.product.subtract(subtractNum);
     }
 }

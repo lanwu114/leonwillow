@@ -5,11 +5,12 @@ import lombok.Data;
 /**
  * Author: LeonWillow | LiuYang | lanwu114
  * Date: 2020/8/10 19:47
- * Des:
+ * Des: 生产者类
  */
 @Data
 public class Producer implements Runnable {
-    private Integer addNum = 10;
+    //定义生产者一次生产的数量，默认为1
+    private Integer addNum = 1;
     private Product product;
 
     public Producer(Integer addNum, Product product) {
@@ -23,8 +24,6 @@ public class Producer implements Runnable {
 
     @Override
     public void run() {
-        while (product.n <= 100) {
-            this.product.add(addNum);
-        }
+        this.product.add(addNum);
     }
 }
