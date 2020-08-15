@@ -9,12 +9,14 @@ import lombok.Data;
  */
 @Data
 public class Consumer implements Runnable {
-    //定义subtractNum 为一个消费者一次消费的数量，默认为1
+    /**
+     * 定义subtractNum 为一个消费者一次消费的数量，默认为1
+     */
     private Integer subtractNum = 1;
     private Product product;
 
-    public Consumer(Integer addNum, Product product) {
-        this.subtractNum = addNum;
+    public Consumer(Integer subtractNum, Product product) {
+        this.subtractNum = subtractNum;
         this.product = product;
     }
 
@@ -24,6 +26,8 @@ public class Consumer implements Runnable {
 
     @Override
     public void run() {
-        this.product.subtract(subtractNum);
+        while (product.getN() <= 100) {
+            this.product.subtract(subtractNum);
+        }
     }
 }

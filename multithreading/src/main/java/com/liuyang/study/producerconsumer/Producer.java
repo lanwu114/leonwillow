@@ -24,6 +24,8 @@ public class Producer implements Runnable {
 
     @Override
     public void run() {
-        this.product.add(addNum);
+        while(product.getN()<=100){
+            this.product.add(addNum);
+        }
     }
 }
