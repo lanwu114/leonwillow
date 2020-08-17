@@ -24,8 +24,8 @@ class Ticket {
     public void saleTicket() {
         lock.lock();
         try {
-            if(number > 0 ){
-                System.out.println(Thread.currentThread().getName()+"\t卖出第："+(number--)+"\t还剩下："+number);
+            if (number > 0) {
+                System.out.println(Thread.currentThread().getName() + "\t卖出第：" + (number--) + "\t还剩下：" + number);
             }
         } catch (Exception e) {
             e.printStackTrace();
